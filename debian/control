@@ -1,0 +1,16 @@
+Source: dde-desktop-plugin-random-wallpaper
+Section: admin
+Priority: optional
+Maintainer: hualet <wangyaohua@deepin.org>
+Standards-Version: 1.0
+Build-Depends:
+ debhelper-compat (= 11),
+
+Package: dde-desktop-plugin-random-wallpaper
+Architecture: all
+Depends:
+ python3,
+ python3-requests,
+ ${misc:Depends},
+Description: dde-desktop plugin to set random wallpapers
+
