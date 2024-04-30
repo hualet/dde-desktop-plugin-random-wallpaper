@@ -163,4 +163,6 @@ cython_debug/
 debian/.debhelper/
 debian/dde-desktop-plugin-random-wallpaper/
 debian/debhelper-build-stamp
+debian/dde-desktop-plugin-random-wallpaper.substvars
+debian/files
 
