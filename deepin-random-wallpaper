@@ -72,7 +72,7 @@ def download_wallpaper(url):
 
 def set_wallpaper(path):
     try:
-        command = 'qdbus com.deepin.daemon.Appearance /com/deepin/daemon/Appearance com.deepin.daemon.Appearance.SetCurrentWorkspaceBackground {}'.format(path)
+        command = 'qdbus org.deepin.daemon.Appearance1 /org/deepin/daemon/Appearance1 org.deepin.daemon.Appearance1.SetCurrentWorkspaceBackground {}'.format(path)
         print("set wallpaper: ", command)
         os.system(command)
     except Exception as e:
