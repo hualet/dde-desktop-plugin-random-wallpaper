@@ -88,7 +88,7 @@ if __name__ == '__main__':
     wallpaper = get_random_wallpaper_codelife()
     if not wallpaper:
         wallpaper = get_random_wallpaper_360()
-    print("ramdom wallpaper url: ", wallpaper)
+    print("random wallpaper url: ", wallpaper)
 
     if wallpaper:
         uri = download_wallpaper(wallpaper)
