@@ -30,9 +30,15 @@ def get_random_wallpaper_360():
 def get_random_wallpaper_codelife():
     wallpaper = None
     try:
-        data = requests.get("https://api.codelife.cc/wallpaper/random").json()
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+                          '(KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36'
+        }
+        data = requests.get("https://api.codelife.cc/wallpaper/random?lang=cn", headers=headers).json()
         if data["code"] == 200:
             wallpaper = data["data"]
+        else:
+            print("codelife API request failed with status code:", data["code"])
         return wallpaper
     except Exception as e:
         print("exception in get_random_wallpaper_codelife: ", e)
